@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const GradeForm = ({ addGrade }) => {
+const GradeForm = ({ addGrade, useCase }) => {
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
   const [grade, setGrade] = useState(0);
@@ -45,7 +45,7 @@ const GradeForm = ({ addGrade }) => {
         required
       />
 
-      <button type="submit">Add Grade</button>
+      <button type="submit">{useCase}</button>
     </form>
   );
 };
